@@ -3,7 +3,7 @@
 %{?scl:%scl_package perl-%{cpan_name}}
 
 Name:           %{?scl_prefix}perl-%{cpan_name}
-Version:        7.18
+Version:        7.22
 Release:        2%{?dist}
 Summary:        Create a module Makefile
 License:        GPL+ or Artistic
@@ -18,7 +18,7 @@ Patch1:         %{cpan_name}-7.12-Link-to-libperl-explicitly-on-Linux.patch
 # Unbundle version modules
 Patch2:         %{cpan_name}-7.04-Unbundle-version.patch
 # Unbundle Encode::Locale module
-Patch3:         %{cpan_name}-7.00-Unbundle-Encode-Locale.patch
+Patch3:         %{cpan_name}-7.22-Unbundle-Encode-Locale.patch
 # Provide maybe_command independently, bug #1129443
 Patch4:         %{cpan_name}-7.11-Provide-ExtUtils-MM-methods-as-standalone-ExtUtils-M.patch
 BuildArch:      noarch
@@ -220,6 +220,12 @@ find $RPM_BUILD_ROOT -type f -name .packlist -delete
 %{_mandir}/man3/ExtUtils::MM::Utils.*
 
 %changelog
+* Mon Aug 22 2016 Jitka Plesnikova <jplesnik@redhat.com> - 7.22-2
+- Update patch to remove patch leftovers
+
+* Mon Aug 22 2016 Jitka Plesnikova <jplesnik@redhat.com> - 7.22-1
+- 7.22 bump
+
 * Mon Jul 11 2016 Petr Pisar <ppisar@redhat.com> - 7.18-2
 - SCL
 
