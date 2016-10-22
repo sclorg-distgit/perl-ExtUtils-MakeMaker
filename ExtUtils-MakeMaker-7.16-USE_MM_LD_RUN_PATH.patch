@@ -88,7 +88,7 @@ index fc1b1e6..89d7ca8 100644
      print "MakeMaker (v$VERSION)\n" if $Verbose;
      if (-f "MANIFEST" && ! -f "Makefile" && ! $UNDER_CORE){
          check_manifest();
-@@ -2781,6 +2801,40 @@ precedence.  A typemap in the current directory has highest
+@@ -2798,6 +2818,40 @@ precedence.  A typemap in the current directory has highest
  precedence, even if it isn't listed in TYPEMAPS.  The default system
  typemap has lowest precedence.
  
