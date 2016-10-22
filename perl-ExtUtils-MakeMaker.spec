@@ -4,7 +4,7 @@
 
 Name:           %{?scl_prefix}perl-%{cpan_name}
 Version:        7.22
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Create a module Makefile
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -220,6 +220,9 @@ find $RPM_BUILD_ROOT -type f -name .packlist -delete
 %{_mandir}/man3/ExtUtils::MM::Utils.*
 
 %changelog
+* Mon Aug 22 2016 Jitka Plesnikova <jplesnik@redhat.com> - 7.22-2
+- Update patch to remove patch leftovers
+
 * Mon Aug 22 2016 Jitka Plesnikova <jplesnik@redhat.com> - 7.22-1
 - 7.22 bump
 
