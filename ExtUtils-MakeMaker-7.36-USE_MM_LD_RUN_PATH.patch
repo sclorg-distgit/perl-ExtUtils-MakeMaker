@@ -39,7 +39,7 @@ diff --git a/lib/ExtUtils/MM_Unix.pm b/lib/ExtUtils/MM_Unix.pm
 index a0a2ee1..dda54bb 100644
 --- a/lib/ExtUtils/MM_Unix.pm
 +++ b/lib/ExtUtils/MM_Unix.pm
-@@ -1076,7 +1076,7 @@ sub xs_make_dynamic_lib {
+@@ -1074,7 +1074,7 @@ sub xs_make_dynamic_lib {
      }
  
      my $ld_run_path_shell = "";
@@ -88,7 +88,7 @@ index 90790d4..f5459eb 100644
      print "MakeMaker (v$VERSION)\n" if $Verbose;
      if (-f "MANIFEST" && ! -f "Makefile" && ! $UNDER_CORE){
          check_manifest();
-@@ -2839,6 +2859,40 @@ precedence.  A typemap in the current directory has highest
+@@ -2837,6 +2857,40 @@ precedence.  A typemap in the current directory has highest
  precedence, even if it isn't listed in TYPEMAPS.  The default system
  typemap has lowest precedence.
  
