@@ -26,7 +26,7 @@ index 198f05e..d9ebe61 100644
      $Is{SunOS4}  = $^O eq 'sunos';
      $Is{Solaris} = $^O eq 'solaris';
      $Is{SunOS}   = $Is{SunOS4} || $Is{Solaris};
-@@ -1028,7 +1029,7 @@ sub xs_make_dynamic_lib {
+@@ -1059,7 +1060,7 @@ sub xs_make_dynamic_lib {
      push(@m,"	\$(RM_F) \$\@\n");
  
      my $libs = '$(LDLOADLIBS)';
@@ -35,7 +35,7 @@ index 198f05e..d9ebe61 100644
          # Use nothing on static perl platforms, and to the flags needed
          # to link against the shared libperl library on shared perl
          # platforms.  We peek at lddlflags to see if we need -Wl,-R
-@@ -1041,6 +1042,11 @@ sub xs_make_dynamic_lib {
+@@ -1072,6 +1073,11 @@ sub xs_make_dynamic_lib {
              # The Android linker will not recognize symbols from
              # libperl unless the module explicitly depends on it.
              $libs .= ' "-L$(PERL_INC)" -lperl';
