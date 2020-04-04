@@ -8,7 +8,7 @@
 Name:           %{?scl_prefix}perl-%{cpan_name}
 Epoch:          2
 Version:        7.42
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Create a module Makefile
 License:        GPL+ or Artistic
 URL:            https://metacpan.org/release/%{cpan_name}
@@ -214,6 +214,9 @@ BUILDING_AS_PACKAGE=1 %{?scl:scl enable %{scl} '}perl Makefile.PL INSTALLDIRS=ve
 %{_mandir}/man3/ExtUtils::MM::Utils.*
 
 %changelog
+* Tue Jan 07 2020 Jitka Plesnikova <jplesnik@redhat.com> - 2:7.42-3
+- Re-rebuild of bootstrapped packages
+
 * Fri Dec 20 2019 Jitka Plesnikova <jplesnik@redhat.com> - 2:7.42-2
 - SCL
 
